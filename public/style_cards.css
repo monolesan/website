@@ -1,0 +1,725 @@
+/* ALL cards */
+.projects {
+  position: absolute;
+
+  width: 460px;
+  height: auto;
+
+  cursor: move;
+
+  display: none;
+}
+
+.gif, .text {
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
+
+  display: block;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+p {
+  width: 420px;
+  margin: 0px auto;
+}
+
+.leftalign {
+  margin: 0px auto;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.spacebetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#followbutterfly .spacebetween {
+  width: 420px;
+  margin-left: 20px;
+}
+
+#followbutterfly a {
+  cursor: pointer;
+  
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  
+/*   position: absolute;
+  top: 400px;
+  left: 380px; */
+  width: 60px;
+  height: 30px;
+  
+  margin-bottom: 10px;
+}
+
+#followbutterfly button { 
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+}
+
+#followbutterfly p {
+  margin: 10px 20px;
+  font-size: 18px;
+}
+
+#followbutterfly {
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  
+  background: #27FF50;
+}
+
+#butterflies {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.butterfly {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  display: none;
+  z-index: 99;
+}
+
+.butterflyGlitch {
+  mix-blend-mode: exclusion;
+}
+
+
+/* MIRORU */
+#miroru {
+  width: auto;
+}
+
+#miroru p {
+  font-size: 27px;
+  font-family: 'Archivo', sans-serif;
+  
+  position: absolute;
+  top: 260px;
+  left: 20px;
+  width: 350px;
+  
+  margin: 16px 0px 16px 0px;
+}
+
+#miroru_left_side {
+  width: 460px;
+  height: 500px;
+  
+  background-image: url('https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fmiroru%20background.png?v=1588740600427');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+#miroru .gif {
+  position: absolute;
+  left: 28px;
+  top: 28px;
+}
+
+#miroru_logo {
+  position: absolute;
+  left: -30px;
+  top: -30px;
+}
+
+#miroru_whiteboxxxxxx {
+  position: absolute;
+  width: 370px;
+  height: 450px;
+  left: 14px;
+  top: 14px;
+
+  background: #FFFFFF;
+  border: 4px dashed #000000;
+  box-sizing: border-box;
+}
+
+#miroru button{
+  width: 30px;
+  height: 30px;
+  
+  position: absolute;
+  top: 0px;
+  right: -30px;
+  
+  background-image: url('https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fmiroru%20close.png?v=1588737632692');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  
+  outline: none;
+  border: none;
+  
+  padding: 0px;
+}
+
+#miroru_twitter {
+  position: absolute;
+  top: 29px;
+  right: -30px;
+  height: 408px;
+  width: 30px;
+  
+  border: 3px solid #000000;
+  background: #FFFFFF;
+  
+  padding: 6px;
+  
+  font-family: sans-serif;
+  font-weight: 700;
+  line-height: 80%;
+  font-size: 16px;
+  
+  cursor: pointer;
+
+  border: 3px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 7px 7px 9px rgba(0, 117, 255, 0.48);
+  white-space: nowrap;
+}
+
+#miroru_twitter:hover {
+  background: #05FF00;
+  animation: 1s infinite shadowmoves;
+}
+
+#miroru_twitter a {
+  margin: 0 auto;
+  text-decoration: none;
+  color: black;
+}
+
+#miroru_open:hover {
+  animation: 1s infinite shadowmoves;
+}
+
+#miroru_open {
+  position: absolute;
+  left: 0px;
+  top: 370px;
+  width: 362px;
+  height: 36px;
+  
+  background-image: url('https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fmiroru%20open%20bbbbutton.png?v=1588740602719');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+@keyframes shadowmoves {
+  0% { 
+    outline-offset: -1px; outline: 1px solid #000000;
+    box-shadow: 15px 7px 0px #00FF19; 
+  }
+  50% { box-shadow: 15px 7px 21px #00FF19; }
+  80% { box-shadow: 9px 9px 21px #00FF19; }
+  100% { 
+    outline-offset: -10px;  outline: 10px solid #000000;
+/*     border: 10px solid #000000; */
+    box-shadow: 15px 7px 0px #00FF19; 
+  }
+}
+
+/* ISOLATION */
+#isolation {
+  right: 40px;
+  top: 60px;
+}
+
+/* text */
+#isolation h2 {
+ padding: 0;
+ margin: 0;
+}
+
+#isolation p {
+  font-family: sans-serif;
+  margin: 10px 0px 14px 0px;
+  font-size: 16px;
+}
+
+#isolation a {
+  margin-right: 16px;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #0500FF;
+}
+
+#isolation_button {
+  position: absolute;
+  margin: 0;
+  right: 20px;
+}
+
+/* containers */
+#isolation_header {
+  background: black;
+  color: white;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  padding: 20px;
+  font-size: 16px;
+}
+
+#isolation_content {
+  background: radial-gradient(
+    52.56% 52.56% at 50% 47.44%,
+    rgba(255, 0, 0, 0.3) 0%,
+    #F584FF 43.75%,
+    #F9FFD2 88.54%
+  );
+  color: black;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-width: 3px;
+  border-color: #FB33F3;
+  padding: 22px 18px 16px 18px;
+}
+
+/* MAKE ME BIG */
+#makemebig {
+  background: white;
+  padding: 20px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#makemebig_left_eye {
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  width: 80px;
+  height: auto;
+}
+
+#makemebig_right_eye {
+  position: absolute;
+  top: 360px;
+  left: 160px;
+  width: 80px;
+  height: auto;
+  transform: rotate(-40.4deg);
+}
+
+#makemebig button {
+  padding: 2px;
+  margin-right: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+#makemebig a {
+  padding: 2px;
+  margin: 20px 20px 0px 20px;
+  font-weight: 900;
+  color: black;
+  text-decoration: none;
+}
+
+#makemebig p {
+  padding: 10px 0px;
+}
+
+/* FIX POSTURE */
+#fixposture {
+  top: 130px;
+  left: 20px;
+  box-shadow: -6px 4px 0px rgba(0, 0, 0, 0.54);
+  background: #FFF96C;
+  
+  border: 3px solid #000000;
+  
+  padding: 14px 0px 20px 0px;
+  margin-bottom: 1em;
+  
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+}
+
+#fixposture a {
+  box-shadow: 5px 4px 0px rgba(0, 0, 0, 0.54);
+  background: #FDEAFF;
+  
+  border: 4px solid #000000;
+  box-sizing: border-box;
+  
+  /* font */
+  font-size: 18px;
+  
+  color: black;
+  text-decoration: none;
+}
+
+#fixposture button {
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0px 18px 10px 0px;
+  
+  border: none;
+  text-decoration: none;
+  outline: none;
+  background: transparent;
+}
+
+#fixposture a {
+  font-weight: 500;
+  margin-right: 20px;
+  padding: 2px 12px;
+}
+
+#fixposture a:hover {
+  background: red;
+}
+
+#fixposture h2 {
+  font-weight: 900;
+  margin: 0px 0px 10px 20px;
+}
+
+#fixposture p {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 16px 0px 16px 20px;
+}
+
+#fixposture button:hover, #fixposture a:hover {
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.54);
+}
+
+/* SMILE AND LIKE */
+#smileandlike {
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 1em;
+  margin-bottom: 20px;
+  
+  color: #6D6D6D;
+  font-family: 'VT323', monospace;
+  
+  padding: 20px;
+}
+
+#smileandlike h2 {
+  margin: 0px;
+  font-size: 22px;
+}
+
+#smileandlike p {
+  margin: 10px 0px;
+  font-size: 20px;
+}
+
+#smileandlike a {
+  margin-top: 14px;
+  margin-left: 14px;
+  font-size: 18px;
+}
+
+#smileandlike button {
+  background: transparent;
+  outline: none;
+  border: none;
+  
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  
+  text-decoration: underline;
+  color: #0500FF;
+}
+
+.pixelheart {
+  position: absolute;
+ 
+/*   margin: 0px auto;  */
+  z-index: 300;
+  
+  animation: pixelheart_animation 2s ease-in-out infinite;
+  transform-origin: center;
+  
+  display: none;
+}
+
+@keyframes pixelheart_animation {
+  5% {
+    transform: scale(1, 1);
+    
+      }
+  50% {
+    transform: scale(1.5, 1.5);
+   
+  }
+  100% {
+        transform: scale(0, 0);
+    display: none;
+      }
+}
+
+/* FIRST EXPERIMENT */
+#designaiyourmood {
+  top: 200px;
+  left: 600px;
+  height: auto;
+  
+  font-family: 'Archivo', sans-serif;
+  
+  background: #fafafa;
+  color: #141414;
+  
+  padding: 10px;
+  animation: 18.6s infinite change-background-color;
+}
+
+@keyframes change-background-color {
+  0% {
+/*     happy */
+    animation-timing-function: steps(1, end);
+    background: #FFEBEB;
+  }
+  17.1% {
+/*     surprise */
+    animation-timing-function: steps(1, end);
+    background: #FFFEDB;
+  }
+  32% {
+/*     fear */
+    animation-timing-function: steps(1, end);
+    background: #F3D4F2;
+  }
+  33.6% {
+/*     neutral */
+    animation-timing-function: steps(1, end);
+    background: #fafafa;
+  }
+  35.2% {
+    animation-timing-function: steps(1, end);
+/*     sad */
+    background: #EEEFFF;
+  }
+  49.6% {
+    animation-timing-function: steps(1, end);
+/*     fear */
+    background: #F3D4F2;
+  }
+  60.8% {
+    animation-timing-function: steps(1, end);
+/*     surprise */
+    background: #FFFEDB;
+  }
+  67.7% {
+    animation-timing-function: steps(1, end);
+/*     happy */
+    background: #FFEBEB;    
+  }
+  89.6% {
+/*     neutral */
+    background: #fafafa; 
+    animation-timing-function: steps(1, end);
+  }
+  97.6% {
+/*     disgust */
+    background: #E0EFDA;
+    animation-timing-function: steps(1, end);
+  }
+  100% {}
+}
+
+#designaiyourmood button {
+  height: 26px;
+  margin-right: 20px;
+  
+  outline: none;
+  border: none;
+  
+  font-size: 16px;
+  font-family: 'Archivo', sans-serif;
+  
+  cursor: pointer;
+}
+
+/* text*/
+#designaiyourmood h2, #designaiyourmood span, #designaiyourmood button {
+  text-shadow: 0px 2px 9px #FFE600;
+  background: pink;
+}
+
+#designaiyourmood h2 {
+  max-width: 360px;
+  margin-left: 20px;
+}
+
+#designaiyourmood p {
+  margin-top: 10px;
+  matgin-bottom: 10px;
+  
+  font-size: 18px;
+  font-family: 'Archivo', sans-serif;
+}
+
+/* links */
+#designaiyourmood a {
+  border: 1px;
+  background: pink;
+  text-decoration: none;
+  color: black;
+  line-height: normal;
+  font-size: 16px;
+  text-align: center;
+  text-shadow: 0px 4px 5px rgba(255, 245, 0, 1);
+  cursor: pointer;
+  padding: 8px 12px;
+  margin: 10px 20px 0px 10px;
+}
+
+#designaiyourmood a:hover {
+  transform: rotate(-3deg);
+  box-shadow: 0px 4px 20px rgba(255, 245, 0, 1);
+}
+
+/* PRINCESS PARTS */
+/* card */
+#princessparts, #princessparts_article {
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  top: 20px;
+  left: 80px;
+  height: auto;
+
+  background: linear-gradient(
+    0deg,
+    #FFC2E3 71.4%,
+    #FFD9ED 95.41%,
+    #FFC9E6 99.83%,
+    #FFEAF5 107.41%,
+    #FFDDEF 116.26%
+  );
+
+  border: 1.5px solid #FF63B7;
+  box-sizing: border-box;
+  border-radius: 3px 3px 0px 0px;
+}
+
+/* container for text, gif and arts */
+#princessparts_textcontainer {
+  width: 440px;
+  height: 600px;
+  margin: 0px auto;
+  padding: 18px 10px 8px 10px;
+
+  background: #FFEDF2;
+  border: 1.5px solid #FF63B7;
+  box-sizing: border-box;
+
+  overflow-y: auto;
+}
+
+/* red close button */
+#princessparts button {
+  background-image: url("https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fred%20buton.png?v=1588656808538");
+  width: 20px;
+  height: 20px;
+  margin: 6px 12px 4px 0px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+/* links */
+#princessparts a {
+  padding: 3px 16px 4px 16px;
+  margin: 10px 12px 10px 0px;
+
+  background: linear-gradient(
+      0deg,
+      #D5C8B9 7.77%,
+      rgba(255, 255, 255, 0) 13.45%
+    ),
+    linear-gradient(270deg, #D5C8B9 1.82%, rgba(255, 255, 255, 0) 3.29%),
+      linear-gradient(90deg, #FFFFFF 2.36%, rgba(255, 255, 255, 0) 2.37%),
+        linear-gradient(180deg, #FFFFFF 8.33%, rgba(255, 255, 255, 0) 8.34%),
+          #EEE1D2;
+  border: 1.5px solid #000000;
+  box-sizing: border-box;
+  color: #FF0000;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+
+  outline: none;
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+#princessparts a:hover {
+  background: linear-gradient(
+      0deg,
+      #FFA9F7 7.77%,
+      rgba(255, 255, 255, 0) 13.45%
+    ),
+    linear-gradient(270deg, #D595CF 1.82%, rgba(255, 255, 255, 0) 3.29%),
+      linear-gradient(90deg, #FADCF7 2.36%, rgba(255, 255, 255, 0) 2.37%),
+        linear-gradient(180deg, #FFE3FD 8.33%, rgba(255, 255, 255, 0) 8.34%),
+          #F4BBEF;
+}
+
+/* for pictures i drew on PP */
+.princesspaerts_art {
+  max-width: 420px;
+  height: auto;
+  margin: 4px auto;
+  display: block;
+}
+
+#princessparts_drawings {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 589px;
+  height: auto;
+  
+  background: black;
+  z-index: 301;
+  display: none;
+}
+
+#princessparts_article, #fixposture_article {
+  position: absolute;
+  display: none;
+  top: 70px;
+}
+
+#princessparts_article {
+/*   background: linear-gradient(0deg, #FF00A3 34.12%, #FF00C9 82.14%, #FF00AE 92.25%, #FF00D9 97.62%, #FF00C7 102.99%); */
+/*   border: 1.5px solid #FF0013; */
+  padding: 4px 10px 2px 10px;
+  border: 1.5px solid #4CFF00;
+}
+
