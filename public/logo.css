@@ -1,0 +1,31 @@
+#logo span {
+  display: block;
+  -webkit-animation: line 60s linear infinite reverse;
+  animation: line 10s linear infinite reverse;
+  margin-bottom: 20vh;
+}
+
+#logo {
+  position: parent;
+  padding-top: 0.5rem;
+  padding-left: 3vh;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  font-size: 2.4rem;
+  line-height: 1em;
+  white-space: nowrap;
+  text-align: left;
+  max-width: 6vw;
+  height: 100vh;
+}
+
+@keyframes line {
+  0% {
+    transform: translateY(0%);
+/*     transform: rotate(30deg);  */
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
