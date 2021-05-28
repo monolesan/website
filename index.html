@@ -22,10 +22,13 @@
     <link rel="stylesheet" href="style_canvas.css" />
 <!--     <link rel="stylesheet" href="/logo.css" /> -->
     <!-- import tensorflow.js facemesh model -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+<!--     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/facemesh"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/facemesh"></script> -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.6.0/dist/tf.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection"></script>
 
     <!-- import the webpage's client-side javascript file -->
     <script src="show.js" defer></script>
@@ -126,11 +129,23 @@
 <!--      -->
 <!--      -->
 <!--      -->
-    <div style="position: absolute; top: 100px; right: 300px; background: #05FF00; border: 20px solid #FF0CF6;" class="projects" id="omgwhatareyoudoing">
+
+<!--         <div style="position: absolute; top: 100px; right: 300px; background: #05FF00; border: 20px solid #FF0CF6;" class="projects" id="omgwhatareyoudoing">
       <p>
         ✧  • 　.　 　*<br>
        *    omg  ✧.  .<br>
         ✧* what are you doin?(( i said it doesn't work (<br>
+        ✧* ✧* ✧* ✧* <br>
+        ✧  • 　.　 　*<br>
+      <span onclick="closeCard(omgwhatareyoudoing)" style="cursor: pointer; text-decoration: underline;">close</span>
+      </p>
+    </div> -->
+    
+     <div style="position: absolute; top: 100px; right: 300px; background: #05FF00; border: 20px solid #FF0CF6;" class="projects" id="omgwhatareyoudoing">
+      <p>
+        ✧  • 　.　 　*<br>
+       *    omg  ✧.  .<br>
+        ✧* why do you need to learn your face? (<br>
         ✧* ✧* ✧* ✧* <br>
         ✧  • 　.　 　*<br>
       <span onclick="closeCard(omgwhatareyoudoing)" style="cursor: pointer; text-decoration: underline;">close</span>
