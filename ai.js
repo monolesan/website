@@ -1,10 +1,17 @@
-tf.setBackend('webgl').then(console.log('Backend set to', tf.getBackend()));
+// tf.setBackend('webgl').then(console.log('Backend set to', tf.getBackend()));
 
 function isMobile() {
   const isAndroid = /Android/i.test(navigator.userAgent);
   const isiOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
   return isAndroid || isiOS;
 }
+
+const state = {
+  backend: "webgl",
+  maxFaces: 1,
+  triangulateMesh: true,
+  predictIrises: false
+};
 
 let videoWidth, videoHeight;
 
@@ -15,7 +22,7 @@ const mobile = isMobile();
 // to avoid crowding limited screen space.
 const renderPointcloud = mobile === false;
 
-let modelFacemesh; 
+let model; 
 
 var stream1;
 async function setupCamera() {
@@ -53,7 +60,13 @@ async function loadVideo() {
 
 const main = async () => {
   let video;
-  modelFacemesh = await facemesh.load();
+  // modelFacemesh = await facemesh.load();
+  await tf.setBackend(state.backend);
+
+  model = await faceLandmarksDetection.load(
+    faceLandmarksDetection.SupportedPackages.mediapipeFacemesh,
+    { maxFaces: state.maxFaces }
+  );
 
   try {
     video = await loadVideo();
@@ -110,7 +123,13 @@ function deleteTransition() {
     ctx.drawImage(video, 0, 0, videoWidth, videoHeight, 0, 0, canvas.width, canvas.height);
     deleteTransition();
     document.getElementById('specialarea').style.display = 'none';
-    const predictionsFacemesh = await modelFacemesh.estimateFaces(video);
+    // const predictionsFacemesh = await modelFacemesh.estimateFaces(video);
+    const predictionsFacemesh = await model.estimateFaces({
+    input: video,
+    returnTensors: false,
+    flipHorizontal: false,
+    predictIrises: state.predictIrises
+  });
     if (predictionsFacemesh.length > 0) {
       
       var resultFacemesh = predictionsFacemesh[0].scaledMesh;
