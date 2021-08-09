@@ -4,23 +4,36 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>✧* ものЛЕさん.𝑐o𝘮  :ȯ: *✧</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="✧  • 　.　* Interactive installations with AI on the web." />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Carter+One&family=Poppins:ital,wght@1,500;1,900&family=VT323&family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
     <link
       id="favicon"
       rel="icon"
-      href="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2F%D0%BA%D0%BE%D1%82%D0%B8%D0%BA-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BD%D0%BE%D1%82%D0%B8%D0%BA.png?v=1588757110122"
+      href="assets/kotik_bloknotik.png"
       type="image/x-icon"
     />
+    <title>✧* ものЛЕさん.𝑐o𝘮  :ȯ: *✧</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!--     OG -->
+    <meta property="og:title" content="monolesan">
+    <meta property="og:description" content="Artist and creative technologist focused on artificial intelligence ☾ *✧.">
+    <meta property="og:image" content="assets/banner.png">
+    <meta property="og:url" content="https://monolesan.com">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:type" content="website">
+    <!--     twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:alt" content="Artist and creative technologist focused on artificial intelligence ☾ *✧.">
+    <meta name="twitter:site" content="@monolesan">
+    <meta name="twitter:creator" content="@monolesan">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Carter+One&family=Poppins:ital,wght@1,500;1,900&family=VT323&family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="style_cards.css" />
-    <link rel="stylesheet" href="style_canvas.css" />
-<!--     <link rel="stylesheet" href="/logo.css" /> -->
     <!-- import tensorflow.js facemesh model -->
 <!--     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
@@ -31,14 +44,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection"></script>
 
     <!-- import the webpage's client-side javascript file -->
-    <script src="show.js" defer></script>
-    <script src="makelettersfly.js" defer></script>
-    <script src="drag.js" defer></script>
-    <script src="eastereggs.js" defer></script>
     <script src="ai.js" defer></script>
   </head>
   <body>
-    <img id="logo" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fredlogo.png?v=1588648172389">
+    <img id="logo" src="assets/redlogo.png">
     <div id="canvas-wrapper">
       <canvas id="output" style=""></canvas>
       <video
@@ -50,17 +59,23 @@
         visibility: hidden;
         width: auto;
         height: auto;
-        position: absolute;
-        "></video>
+        position: absolute;"></video>
+      
       <button class="button_project" id="butt_miroru" onclick="showCard(miroru)">miroru</button>
       <button class="button_project" id="butt_isolation" onclick="showCard(isolation)">isolation</button>
       <button class="button_project" id="butt_princessparts" onclick="showCard(princessparts)">princess parts</button>
-      <button class="button_project" id="butt_learnyourfacepartswithai" onclick="showCard(omgwhatareyoudoing)">learn your face</button>
+<!--       <button class="button_project" id="butt_learnyourfacepartswithai" onclick="showCard(omgwhatareyoudoing)">learn your face</button> -->
       <button class="button_project" id="butt_makemebig" onclick="showCard(makemebig)">make me big</button>
       <button class="button_project" id="butt_fixposture" onclick="showCard(fixposture)">fix posture</button>
       <button class="button_project" id="butt_smileandlike" onclick="showCard(smileandlike)">smile&like</button>
       <button class="button_project" id="butt_designaiyourmood" onclick="showCard(designaiyourmood)">first experiment</button>
       <button class="button_project" id="butt_followbutterfly" onclick="showCard(followbutterfly); showButterflies();">follow butterfly</button>
+<!--       😍 -->
+      <button class="button_project" id="butt_forgottenblinks" onclick="showCard(forgottenblinks)">forgotten blinks</button>
+      <button class="button_project" id="butt_realless" onclick="showCard(realless)">realless</button>
+      <button class="button_project" id="butt_thisolesyadoesntexist" onclick="showCard(thisolesyadoesntexist)">this olesya doesn’t exist</button>
+      <button class="button_project" id="butt_edgarmusicVideo" onclick="showCard(edgarmusicVideo)">music video</button>
+      <!-- <button class="button_project" id="butt_generatedstories" onclick="showCard(generatedstories)">generated stories</button> -->
     </div>
     <p id="description">
       hi hi hi welcome to my 2d world <br>
@@ -97,59 +112,32 @@
         <h2>Follow butterfly</h2>
         <button onclick="closeCard(followbutterfly); hideButterflies()">close</button>
       </div>
-      <img class="gif" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Ffollowbutterfly.gif?v=1590027407779">
+      <img class="gif" src="assets/followbutterfly.gif">
       <p>Technologies and creativity in combination can give us superpowers. In this project, you obtain a magical gaze that lets you animate a 3d character and a butterfly with your eyes. ✧  • 　.</p>
       <div class="leftalign">
-        <a onmouseover="butterfliesFlyToTheButton(this)" onmouseout="changeButterflyPosition()">open</a>
+        <a target="_blank" href="https://follow-butterfly.glitch.me/" onmouseover="butterfliesFlyToTheButton(this)" onmouseout="changeButterflyPosition()">open</a>
       </div>
       
-      <img style="width: 14px; height: auto; position: absolute; top: 144px; left: 60px;" class="acidgreentears" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fright%20acid%20green%20tear.png?v=1589024408285">
-      <img style="width: 16px; height: auto; position: absolute; top: 142px; left: 88px;" class="acidgreentears" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fright%20acid%20green%20tear.png?v=1589024408285">
+      <img style="width: 14px; height: auto; position: absolute; top: 144px; left: 60px;" class="acidgreentears" src="assets/right_acidgreentear.png">
+      <img style="width: 16px; height: auto; position: absolute; top: 142px; left: 88px;" class="acidgreentears" src="assets/right_acidgreentear.png">
     </div>
     
     <div class="projects" id="makemebig" onclick="touchCard(makemebig)">
-      <img id="makemebig_left_eye" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Flefteye.png?v=1588723126493">
-      <img id="makemebig_right_eye" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fright%20eye.png?v=1588723126543">
+      <img id="makemebig_left_eye" src="assets/lefteye.png">
+      <img id="makemebig_right_eye" src="assets/righteye.png">
       <div class="leftalign">
         <button onclick="closeCard(makemebig)">close</button>
       </div>
       <p id="makemebig_text">
         Make me big: font changes size based on your position in front of screen.
       </p>
-      <img class="gif" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fmakemebig.gif?v=1588677427900">
+      <img class="gif" src="assets/makemebig.gif">
       <div class="leftalign">
         <a target="_blank" href="https://twitter.com/monolesan/status/1158716693021167616">twitter</a>
         <a onmouseover="resizeText(this)" onmouseout="stopResizeText(this)" target="_blank" href="https://make-me-big.glitch.me/">open</a>
       </div>
-      <img style="width: 37px; height: auto; position: absolute; top: 59px; left: 64px;" class="acidgreentears" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fright%20acid%20green%20tear.png?v=1589024408285">
-      <img style="width: 37px; height: auto; position: absolute; top: 404px; left: 172px;" class="acidgreentears" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fright%20acid%20green%20tear.png?v=1589024408285">
-    </div>
-    
-<!--      -->
-<!--      -->
-<!--      -->
-<!--      -->
-
-<!--         <div style="position: absolute; top: 100px; right: 300px; background: #05FF00; border: 20px solid #FF0CF6;" class="projects" id="omgwhatareyoudoing">
-      <p>
-        ✧  • 　.　 　*<br>
-       *    omg  ✧.  .<br>
-        ✧* what are you doin?(( i said it doesn't work (<br>
-        ✧* ✧* ✧* ✧* <br>
-        ✧  • 　.　 　*<br>
-      <span onclick="closeCard(omgwhatareyoudoing)" style="cursor: pointer; text-decoration: underline;">close</span>
-      </p>
-    </div> -->
-    
-     <div style="position: absolute; top: 100px; right: 300px; background: #05FF00; border: 20px solid #FF0CF6;" class="projects" id="omgwhatareyoudoing">
-      <p>
-        ✧  • 　.　 　*<br>
-       *    omg  ✧.  .<br>
-        ✧* why do you need to learn your face? (<br>
-        ✧* ✧* ✧* ✧* <br>
-        ✧  • 　.　 　*<br>
-      <span onclick="closeCard(omgwhatareyoudoing)" style="cursor: pointer; text-decoration: underline;">close</span>
-      </p>
+      <img style="width: 37px; height: auto; position: absolute; top: 59px; left: 64px;" class="acidgreentears" src="assets/right_acidgreentear.png">
+      <img style="width: 37px; height: auto; position: absolute; top: 404px; left: 172px;" class="acidgreentears" src="assets/right_acidgreentear.png">
     </div>
     
     <div class="projects" id="princessparts" onclick="touchCard(princessparts)">
@@ -157,14 +145,14 @@
         <button class="close" onclick="closeCard(princessparts)"></button>
       </div>
       <div id="princessparts_textcontainer">
-        <img class="gif" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fprincess%20parts%20gid.gif?v=1588563115104">
+        <img class="gif" src="assets/princess_parts.gif">
         <p>Princess Parts is the only one place on the grunge wide web where you can draw with your fascinating eyes, hands, chest and knees.</p>
         <p>Arts I created (scroll please):</p>
-        <img class="princesspaerts_art" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fart1.png?v=1588657812567">
-        <img class="princesspaerts_art" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2FMy%20lovely%20art%20on%20Princess%20Parts%20(8).png?v=1588660094971">
-        <img class="princesspaerts_art" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2FMy%20lovely%20art%20on%20Princess%20Parts.png?v=1588660109564">
-        <img class="princesspaerts_art" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2FMy%20lovely%20art%20(5).png?v=1588660112235">
-        <img class="princesspaerts_art" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2FMy%20lovely%20art%20(1).png?v=1588660131609">
+        <img class="princesspaerts_art" src="assets/art1.png">
+        <img class="princesspaerts_art" src="assets/art2.png">
+        <img class="princesspaerts_art" src="assets/art3.png">
+        <img class="princesspaerts_art" src="assets/art4.png">
+        <img class="princesspaerts_art" src="assets/art5.png">
         <p>thanks</p>
       </div>
       <div class="leftalign">
@@ -181,8 +169,8 @@
         </h2>
         <button onclick="closeCard(designaiyourmood)">close</button>
       </div>
-      <img class="gif" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Ffirst%20experiment%20ai%20design%20mood.gif?v=1588663161398">
-      <img id="gifwithtears_aimooddesign" style="opacity: 0; position: absolute; top: 76px; left: 30px;" class="gif" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Ffirst%20experiment%20tears.gif?v=1589111466837">
+      <img class="gif" src="assets/firstexperiment.gif">
+      <img id="gifwithtears_aimooddesign" style="opacity: 0; position: absolute; top: 76px; left: 30px;" class="gif" src="assets/firstexperiment_tears.gif">
       <p style="height: 80px;" id="designAImood_text" class="text">
         This is my first experiment with AI where I pondered: <span>what if design will alter based on human’s emotions?</span> Here, AI recognizes your emotions and changes design with content.
       </p>
@@ -190,8 +178,6 @@
         <a target="_blank" href="https://twitter.com/monolesan/status/1123230490016849920">twitter</a>
         <a onmouseover="changeText()" onmouseout="changeTextback()" target="_blank" href="https://mood-ai-design.glitch.me/">open</a>
       </div>
-<!--       <img style="width: 10px; height: auto; position: absolute; top: 182px; left: 340px;" class="acidgreentears" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fright%20acid%20green%20tear.png?v=1589024408285">
-      <img style="width: 10px; height: auto; position: absolute; top: 178px; left: 362px;" class="acidgreentears" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fright%20acid%20green%20tear.png?v=1589024408285"> -->
     </div>
     
     <div class="projects" id="smileandlike" onclick="touchCard(smileandlike)">
@@ -200,13 +186,13 @@
         <button class="pointer" onclick="closeCard(smileandlike)">close</button>
       </div>
       <p>We can just press the button “like” to show people that we love something. But we don’t have this button in real life. In real life, we use words, gestures, emotions to show it. What if we have to smile to show that we love something instead of pressing the button “like”?</p>
-      <img class="gif" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Flike%20and%20smile.gif?v=1588670476446">
+      <img class="gif" src="assets/likeandsmile.gif">
       <div class="leftalign">
         <a class="pointer" target="_blank" href="https://twitter.com/monolesan/status/1150782241947230208">twitter</a>
         <a onmouseover="showPixelHeart(this)" onmouseout="hidePixelHeart(this)" class="pointer" target="_blank" href="https://smile-and-like.glitch.me/">open</a>
       </div>
-      <img style="width: 8.44px; height: auto; position: absolute; top: 320px; left: 366px;" class="acidgreentears" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fright%20acid%20green%20tear.png?v=1589024408285">
-      <img style="width: 8.44px; height: auto; position: absolute; top: 320px; left: 346px;" class="acidgreentears" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fright%20acid%20green%20tear.png?v=1589024408285">
+      <img style="width: 8.44px; height: auto; position: absolute; top: 320px; left: 366px;" class="acidgreentears" src="assets/right_acidgreentear.png">
+      <img style="width: 8.44px; height: auto; position: absolute; top: 320px; left: 346px;" class="acidgreentears" src="assets/right_acidgreentear.png">
     </div>
     
     <div class="projects" id="fixposture" onclick="touchCard(fixposture)">
@@ -214,8 +200,8 @@
         <h2>Fix Posture</h2>
         <button onclick="closeCard(fixposture)">X</button>
       </div>
-      <img class="gif" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Ffix%20posture.gif?v=1588670499234">
-      <img id="gifwithtears" style="opacity: 0; position: absolute; top: 58px; left: 20px;" class="gif" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fezgif.com-gif-maker%20(1).gif?v=1589078632764">
+      <img class="gif" src="assets/fixposture.gif">
+      <img id="gifwithtears" style="opacity: 0; position: absolute; top: 58px; left: 20px;" class="gif" src="assets/fixposturetears.gif">
       <p>Can we solve a problem of poor poster using webcamera and pose tracking?</p>
       <div class="leftalign">
         <a onmouseover="showWindowGhost(fixposture, fixposture_article)" onmouseout="hideWindowGhost(fixposture, fixposture_article)" target="_blank" href="https://www.vice.com/en_asia/article/7x5xkd/if-you-cant-read-this-your-posture-sucks">on VICE</a>
@@ -231,8 +217,8 @@
             <p>Interactive art that repeats person’s movements.</p>
             <a id="miroru_open" onmouseover="showacidgreentears()" onmouseout="hideacidgreentears()" target="_blank" href="https://miroru.glitch.me/"></a>
           </div>
-          <img class="gif" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2FMIRORU%20FLIPPED.gif?v=1588562291580">
-          <img id="miroru_logo" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Flogomiroru%201.png?v=1588747834467">
+          <img class="gif" src="assets/miroru_flipped.gif">
+          <img id="miroru_logo" src="assets/miroru_logo.png">
         </div>
         <button class="close" onclick="closeCard(miroru)"></button>
         <div id="miroru_twitter">
@@ -257,24 +243,90 @@
           <span style="width: 100px"></span>
           <a id="isolation_button" onclick="closeCard(isolation)">close</a>
         </p>
-        <img class="gif" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fisolation.gif?v=1588561102977">
+        <img class="gif" src="assets/isolation.gif">
       </div>
-      <img style="width: 13px; height: auto; position: absolute; top: 281px; left: 371px;" class="acidgreentears" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fright%20acid%20green%20tear.png?v=1589024408285">
-      <img style="width: 13px; height: auto; position: absolute; top: 277px; left: 387px;" class="acidgreentears" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fright%20acid%20green%20tear.png?v=1589024408285">
+      <img style="width: 13px; height: auto; position: absolute; top: 281px; left: 371px;" class="acidgreentears" src="assets/right_acidgreentear.png">
+      <img style="width: 13px; height: auto; position: absolute; top: 277px; left: 387px;" class="acidgreentears" src="assets/right_acidgreentear.png">
     </div>
+<!--     //🥰 -->
+    <div class="projects" id="realless" onclick="touchCard(realless)">
+      <div class="leftalign">
+        <a onclick="closeCard(realless)">close the tab</a>
+      </div>
+      <h1>Realless</h1>
+      <div class="line"></div>
+      <p>From realless.glitch.me</p>
+      <p>This site changes design and makes you feel weird each time you blink. <a target="_blank" href="https://realless.glitch.me/"><button>open</button></a> <a target="_blank" href="https://twitter.com/monolesan/status/1413478003485683717"><button >on twitter</button></a> <a target="_blank" href="https://www.vice.com/en/article/jg8aap/this-website-changes-every-time-you-blink"><button>on VICE</button></a> <a target="_blank" href="https://knife.media/realless-glitch-me/"><button id="turnon">на НОЖЕ</button></a></p>
+      <table>
+        <tr><td colspan="2" align="center"><img src="assets/realless_smallsize.gif"></td></tr>
+        <tr><td class="sub" style="text-align: center;" colspan="2">A demo video</td></tr>
+      </table>
+      
+    </div>
+    <div class="projects" id="forgottenblinks" onclick="touchCard(forgottenblinks)">
+      <a class="close" onclick="closeCard(forgottenblinks)">X</a>
+      <div class="segment">
+        <p>This site disappears reminding you to blink if you forget to do so.</p>
+        <a href="https://twitter.com/monolesan/status/1402625888508862468" target="_blank"><button>twitter</button></a><a href="https://forgotten-blinks.glitch.me/" target="_blank"><button>open</button></a>
+      </div>
+      <div class="segment">
+        <p>
+          We blink 66% less while working on the computer. It causes Computer Vision Syndrome that brings eye fatigue, dry eyes, burning eyes, headache and other problems.
+        </p>
+      </div>
+      <div class="segment">
+        <img src="assets/reddot.png">
+        <p>
+          As a person who uses computer on daily basis, I’m bothered about it because this problem concerns me partly. This is why I challanged myself to solve this problem using technologies.
+        </p>
+      </div>
+      <img src="assets/forgottenblinks_smallsize.gif">
+    </div>
+    <div class="projects" id="thisolesyadoesntexist" onclick="touchCard(thisolesyadoesntexist)">
+      <div>
+        <a class="close leftalign" onclick="closeCard(thisolesyadoesntexist)">X</a>
+      </div>
+      <img src="assets/thisolesyadoesntexistlogo.png">
+      <img src="assets/ooooöooooöooooöooooöoooo.png">
+      <div>
+        <img id="thisolesyadoesntexistphoto" src="assets/photo1.jpeg">
+        <div id="loadingbar_thisolesyadoesntexist"></div>
+      </div>
+      <img src="assets/ooooöooooöooooöooooöoooo.png">
+      <p>If this Olesya doesn’t exist, which one does? GAN generated photos of me (Olesya). Watch a <a target="_blank" href="">video</a> about how I made it.</p>
+<!--       <p><i>Press anywhere on card to see new photo.</i></p> -->
+      <div class="spacebetween">
+        <a target="_blank" href="">on instagram</a>
+        <a target="_blank" href="">on twitter</a>
+        <a target="_blank" href="">open</a>
+      </div>
+    </div>
+    <div class="projects" id="edgarmusicVideo" onclick="touchCard(edgarmusicVideo)">
+      <div class="spacebetween">
+        <h1>Music video for Edgar</h1>
+        <a class="close" onclick="closeCard(edgarmusicVideo); turnOffVideo()">[close]</a>
+      </div>
+      <video id="edgarvideo" class="centered_image" preload="metadata" controls muted><source src="assets/Edgar_KTT_lyrics_3_short.mp4" type="video/mp4"></video>
+      <p>This video was made using different techniques like GAN with audio-reactive latent interpolations to generate and animate eyes, and also iPERCore to transfer my dance motions to the characteries</p>
+      <p>Watch <a target="_blank" href="https://www.instagram.com/p/CNphYjsIRLC/">a video</a> about how I made this! Watch <a target="_blank" href="https://www.youtube.com/watch?v=txo-Tvycnnw&ab_channel=Edgar">the full video</a>. </p>
+    </div>
+<!--     <div class="projects" id="generatedstories" onclick="touchCard(generatedstories)"></div> -->
+      
     
-    <img id="princessparts_drawings" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fprincessparts.gif?v=1588915821588">
+<!--     //🥰 -->
+    
+    <img id="princessparts_drawings" src="assets/princessparts.gif">
     
     <div id="princessparts_article">
     
       <div class="leftalign">
-        <img style="width: 20px;  height: 20px; margin: 4px 0px 4px 0px;" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fred%20buton.png?v=1588656808538">
+        <img style="width: 20px;  height: 20px; margin: 4px 0px 4px 0px;" src="assets/red_button.png">
       </div>
-      <img style="width: 600px; height: auto; border: 1.5px solid #4CFF00;" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fitsnicethat.gif?v=1588910649929">
+      <img style="width: 600px; height: auto; border: 1.5px solid #4CFF00;" src="assets/itsnicethat.gif">
     </div>
     
     <div id="fixposture_article">
-      <img style="border: 10px red solid; box-shadow: -6px 4px 0px rgba(0, 0, 0, 0.54); width: 600px; height: auto;" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fvice.gif?v=1588911128490">
+      <img style="border: 10px red solid; box-shadow: -6px 4px 0px rgba(0, 0, 0, 0.54); width: 600px; height: auto;" src="assets/vice.gif">
     </div>
     
     <svg style="top: 60px; left: 60px;" width="100" height="90" viewbox="0 0 70 60" class="pixelheart">
@@ -296,20 +348,21 @@
     <div id="specialarea" onmouseover="flyletters()"></div>
     
 <!--     <div id="butterflies"> -->
-    <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly butterflyGlitch" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly butterflyGlitch" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly butterflyGlitch" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly butterflyGlitch" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
-      <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly butterflyGlitch" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
+    <a target="_blank"><img class="butterfly butterflyGlitch" src="assets/butterfly3.gif"></a>
+    <a target="_blank"><img class="butterfly" src="assets/butterfly3.gif"></a>
+    <a target="_blank"><img class="butterfly" src="assets/butterfly3.gif"></a>
+    <a target="_blank"><img class="butterfly" src="assets/butterfly3.gif"></a>
+    <a target="_blank"><img class="butterfly butterflyGlitch" src="assets/butterfly3.gif"></a>
+    <a target="_blank"><img class="butterfly" src="assets/butterfly3.gif"></a>
+    <a target="_blank"><img class="butterfly butterflyGlitch" src="assets/butterfly3.gif"></a>
+    <a target="_blank"><img class="butterfly" src="assets/butterfly3.gif"></a>
+    <a target="_blank"><img class="butterfly" src="assets/butterfly3.gif"></a>
+
+<!--     <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly butterflyGlitch" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
+    <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
+    <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
+    <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a>
+    <a target="_blank" href="https://follow-butterfly.glitch.me/"><img class="butterfly butterflyGlitch" src="https://cdn.glitch.com/0337a9ff-22b3-4786-927c-60d314c827be%2Fbutterfly3.gif?v=1590027944041"></a> -->
 <!--     </div> -->
   </body>
 </html>
