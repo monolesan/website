@@ -1,6 +1,6 @@
 // tf.setBackend('webgl').then(console.log('Backend set to', tf.getBackend()));
 var butt_miroru = document.getElementById('butt_miroru'), 
-      butt_isolation = document.getElementById('butt_isolation'),
+//       butt_isolation = document.getElementById('butt_isolation'),
       butt_PrincessParts = document.getElementById('butt_princessparts'),
       // butt_LearnYourFacePartsWithAI = document.getElementById('butt_learnyourfacepartswithai'),
       butt_MakeMeBig = document.getElementById('butt_makemebig'),
@@ -136,8 +136,8 @@ function deleteTransition() {
       var resultFacemesh = predictionsFacemesh[0].scaledMesh;
       butt_miroru.style.top = resultFacemesh[114][1] + 'px';
       butt_miroru.style.left = resultFacemesh[114][0] + 'px';
-      butt_isolation.style.top = resultFacemesh[443][1] + 'px';
-      butt_isolation.style.left = resultFacemesh[443][0] + 'px';
+//       butt_isolation.style.top = resultFacemesh[443][1] + 'px';
+//       butt_isolation.style.left = resultFacemesh[443][0] + 'px';
       butt_PrincessParts.style.top = resultFacemesh[167][1] + 'px';
       butt_PrincessParts.style.left = resultFacemesh[167][0] + 'px';
       
@@ -547,8 +547,8 @@ function flyletters() {
   butt_miroru.style.top = "335px";
   butt_miroru.style.left = "400px";
 
-  butt_isolation.style.top = "264px";
-  butt_isolation.style.left = "540px";
+//   butt_isolation.style.top = "264px";
+//   butt_isolation.style.left = "540px";
 
   butt_PrincessParts.style.top = "380px";
   butt_PrincessParts.style.left = "416px";
