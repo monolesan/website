@@ -1,6 +1,6 @@
 //Make the DIV element draggagle:
 dragElement(document.getElementById("miroru"));
-dragElement(document.getElementById("isolation"));
+// dragElement(document.getElementById("isolation"));
 dragElement(document.getElementById("princessparts"));
 dragElement(document.getElementById("designaiyourmood"));
 dragElement(document.getElementById("smileandlike"));
