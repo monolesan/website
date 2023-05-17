@@ -1,5 +1,5 @@
 var butt_miroru = document.getElementById("butt_miroru");
-var butt_isolation = document.getElementById("butt_isolation");
+// var butt_isolation = document.getElementById("butt_isolation");
 var butt_PrincessParts = document.getElementById("butt_princessparts");
 var butt_LearnYourFacePartsWithAI = document.getElementById(
   "butt_learnyourfacepartswithai"
@@ -14,8 +14,8 @@ function flyletters() {
   butt_miroru.style.top = "305px";
   butt_miroru.style.left = "400px";
 
-  butt_isolation.style.top = "252px";
-  butt_isolation.style.left = "530px";
+//   butt_isolation.style.top = "252px";
+//   butt_isolation.style.left = "530px";
 
   butt_PrincessParts.style.top = "340px";
   butt_PrincessParts.style.left = "470px";
@@ -44,6 +44,6 @@ function flyletters() {
   butt_MakeMeBig.style.transition = "1s";
   butt_FixPosture.style.transition = "1s";
   butt_PrincessParts.style.transition = "1s";
-  butt_isolation.style.transition = "1s";
+//   butt_isolation.style.transition = "1s";
   butt_miroru.style.transition = "1s";
 }
