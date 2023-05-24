@@ -1,3 +1,21 @@
+window.onload = function() {
+  if (/Android|iPhone/i.test(navigator.userAgent)) {
+  document.getElementById('description').innerHTML = 'it is mobile';
+  window.location.href = "mobile.html";
+}
+
+// an alternative structure to check individual matches
+if (
+  navigator.userAgent.match(/Android/i) ||
+  navigator.userAgent.match(/iPhone/i)
+) {
+  window.location.href = "/mobile";
+}
+  if (location.protocol !== "https:") {
+   location.protocol = "https:";
+  }
+}
+
 // tf.setBackend('webgl').then(console.log('Backend set to', tf.getBackend()));
 var butt_miroru = document.getElementById('butt_miroru'), 
 //       butt_isolation = document.getElementById('butt_isolation'),
@@ -184,13 +202,6 @@ function startThis(button) {
     button.innerHTML = 'play with ai';
     button.value = '0';
   }
-}
-
-
-window.onload = function() {
-  // if (location.protocol !== "https:") {
-  //  location.protocol = "https:";
-  // }
 }
 
 
