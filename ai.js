@@ -1,7 +1,7 @@
 window.onload = function() {
   if (/Android|iPhone/i.test(navigator.userAgent)) {
   document.getElementById('description').innerHTML = 'it is mobile';
-  window.location.href = "mobile.html";
+  window.location.href = "mobile.html"; 
 }
 
 // an alternative structure to check individual matches
