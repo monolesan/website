@@ -30,11 +30,12 @@
     <meta name="twitter:site" content="@monolesan">
     <meta name="twitter:creator" content="@monolesan">
     <script>
+       (function() {
         if (/Android|iPhone/i.test(navigator.userAgent)) {
         document.getElementById('description').innerHTML = 'it is mobile';
         window.location.href = "mobile.html"; 
        }
-
+console.log('test')
     // an alternative structure to check individual matches
         if (
           navigator.userAgent.match(/Android/i) ||
@@ -44,7 +45,7 @@
         }
           if (location.protocol !== "https:") {
            location.protocol = "https:";
-          }
+          }})()
     </script>
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Carter+One&family=Poppins:ital,wght@1,500;1,900&family=VT323&family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
