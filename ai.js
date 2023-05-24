@@ -14,7 +14,7 @@
 console.log('test2');
   if (location.protocol !== "https:") {
    location.protocol = "https:";
-//   }
+  }
 // }
 
 // tf.setBackend('webgl').then(console.log('Backend set to', tf.getBackend()));
