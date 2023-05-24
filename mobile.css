@@ -1,1 +1,35 @@
+body {
+  font-family: 'Podkova', serif;
+  font-size: 23px;
+  color: #fafafa;
+  background: #060606;
+}
 
+.cont_flex {
+  display: flex;
+}
+
+.flex_column {
+    flex-direction: column;
+}
+
+#logo {
+  max-height: 36vh;
+}
+
+#description {
+  position: absolute;
+  top: 0px;
+  left: 54px;
+  margin-top: 2vh;
+}
+
+a {
+  text-align: right;
+  color: #FF0016;
+  padding: 1vh 1vw;
+}
+
+video, img {
+  max-width: 80vw;
+}
