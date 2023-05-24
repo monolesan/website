@@ -1,20 +1,21 @@
-window.onload = function() {
-  if (/Android|iPhone/i.test(navigator.userAgent)) {
-  document.getElementById('description').innerHTML = 'it is mobile';
-  window.location.href = "mobile.html"; 
-}
+// window.onload = function() {
+//   if (/Android|iPhone/i.test(navigator.userAgent)) {
+//   document.getElementById('description').innerHTML = 'it is mobile';
+//   window.location.href = "mobile.html"; 
+// }
 
-// an alternative structure to check individual matches
-if (
-  navigator.userAgent.match(/Android/i) ||
-  navigator.userAgent.match(/iPhone/i)
-) {
-  window.location.href = "/mobile";
-}
+// // an alternative structure to check individual matches
+// if (
+//   navigator.userAgent.match(/Android/i) ||
+//   navigator.userAgent.match(/iPhone/i)
+// ) {
+//   window.location.href = "/mobile";
+// }
+console.log('test2');
   if (location.protocol !== "https:") {
    location.protocol = "https:";
-  }
-}
+//   }
+// }
 
 // tf.setBackend('webgl').then(console.log('Backend set to', tf.getBackend()));
 var butt_miroru = document.getElementById('butt_miroru'), 
